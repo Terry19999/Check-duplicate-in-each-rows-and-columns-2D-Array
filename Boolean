@@ -1,0 +1,20 @@
+   public static boolean checkDuplicateSet( int[][] numberSet,int num)
+   {
+       
+       for(int i=0; i<num;i++)
+       {
+          next:
+          for(int k=i+1; k<=num;k++)
+          {        
+            for(int j=0; j<numberSet[i].length; j++)
+                {
+                    if(numberSet[i][j]!=numberSet[k][j])
+                        {
+                            continue next;
+                        }
+                }
+           return true;
+          }
+       } 
+       return false;
+   }
